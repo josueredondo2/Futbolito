@@ -1,3 +1,8 @@
 GIT
 Crea repo
 Defenir el source
+git remote -v
+request condicional
+sync alert realm
+Investigar sobre la sincronizacion de real time en realm
+Realm para la sincronizacion entre movil y sql server
