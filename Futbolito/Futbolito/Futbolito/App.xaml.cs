@@ -13,7 +13,7 @@ namespace Futbolito
 		{
 			InitializeComponent();
 
-			MainPage = new Futbolito.MainPage();
+			MainPage = new Futbolito.View.Login();
 		}
 
 		protected override void OnStart ()

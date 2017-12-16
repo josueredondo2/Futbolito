@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Futbolito.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Futbolito.View
 		public HomePage ()
 		{
 			InitializeComponent ();
-		}
+            BindingContext = PersonaViewModel.GetInstance();
+        }
 	}
 }

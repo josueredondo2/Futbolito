@@ -2,11 +2,15 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Futbolito.View.Login">
-    <ContentPage.Content>
+    <StackLayout  HorizontalOptions="Fill" VerticalOptions="Center">
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="login_futbol.png" HeightRequest="200" WidthRequest="200 "/>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout >
+            <Entry Placeholder="Usuario" Text="{Binding Id}}" HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Contraseña" Text="{Binding Pass}}" IsPassword="True" HorizontalTextAlignment="Center"/>
+            <Button Text="Ingresar" Command="{Binding LoginCommand}"/>
+            <Button Text="Crear Usuario" Command="{Binding NewUserCommand}"/>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

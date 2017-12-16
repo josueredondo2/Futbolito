@@ -2,11 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Futbolito.View.NuevoUsuario">
-    <ContentPage.Content>
+    <StackLayout  HorizontalOptions="Fill" VerticalOptions="Center">
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Image Source="login_futbol.png" HeightRequest="200" WidthRequest="200 "/>
+            <Label Text="Nuevo Usuario" HorizontalTextAlignment="Center" FontSize="Large" TextColor="Blue"/>
         </StackLayout>
-    </ContentPage.Content>
+        <StackLayout >
+            <Entry Placeholder="Cedula" Text="{Binding Id}}" HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Nombre" Text="{Binding Nombre}}" HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Apellidos" Text="{Binding Apellido}}" HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Contraseña" Text="{Binding Pass}}" HorizontalTextAlignment="Center"/>
+            <StackLayout>
+                <Button Text="Tomar  Foto" Command="{Binding TomarImagenCommand}"/>
+                <Button Text="Cargar Imagen" Command="{Binding CargarImagenCommand}"/>
+            </StackLayout>
+        </StackLayout>
+                <StackLayout>
+                    <Button Text="Crear" Command="{Binding CrearUsuarioCommand}"/>
+                </StackLayout>
+        </StackLayout>
 </ContentPage>
