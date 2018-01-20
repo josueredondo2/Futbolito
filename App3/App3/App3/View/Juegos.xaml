@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             x:Name="AbrirApuesta"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.View.Juegos">
+    <StackLayout>
+        <!--Stack de busqueda-->
+        <!--<StackLayout HeightRequest="50" Margin="20">
+            --><!--Entry con el texto a buscar-->
+            <!--<Entry Text="{Binding TextoBuscar}"/>--><!--
+        </StackLayout>-->
+        <!--Lista de cuentas y su binding-->
+        <ListView x:Name="lstvJuegos"
+                  ItemsSource="{Binding lstApuestas}">
+            <!--Template de la lista-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <!--Objeta de la celda-->
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <!--Evento tap-->
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command ="{Binding Path=BindingContext.AbrirApuestaCommand, Source={x:Reference AbrirApuesta}}"
+                                                            CommandParameter ="{Binding Id}"/>
+                            </StackLayout.GestureRecognizers>
+                            <!--Texto a mostrar-->
+                            <Label Text="{Binding Versus}" HorizontalOptions="Start" VerticalOptions="Center"/>
+                            <!--Imagen a mostrar-->
+                            <!--<Image x:Name="imgExpan" HorizontalOptions="EndAndExpand" VerticalOptions="Center" Source="ver_icon.png" HeightRequest="28" WidthRequest="28"/>-->
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.View.Login">
+    <StackLayout  HorizontalOptions="Fill" VerticalOptions="Center">
+        <StackLayout>
+            <Image Source="login_futbol.png" HeightRequest="200" WidthRequest="200 "/>
+        </StackLayout>
+        <StackLayout >
+            <Entry Placeholder="Usuario" Text="{Binding IdUser}}" HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Contraseña" Text="{Binding Contraseña}}" IsPassword="True" HorizontalTextAlignment="Center"/>
+            <Button Text="Ingresar" Command="{Binding LoginCommand}"/>
+            <Button Text="Crear Usuario" Command="{Binding NewUserCommand}"/>
+            <Label Text="Recordar Credenciares"/>
+            <Switch ></Switch>
+            <!--IsToggled="{Binding RememberLastUser}-->
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
